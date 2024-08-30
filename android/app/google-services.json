@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "717725493715",
+    "project_id": "ticket-app-odk",
+    "storage_bucket": "ticket-app-odk.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:717725493715:android:09a92ad9d51dca745fa726",
+        "android_client_info": {
+          "package_name": "com.example.ticket_app_odk"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBvt-1sk-qFHBvVwodUxv98srQzrU4uRFM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
