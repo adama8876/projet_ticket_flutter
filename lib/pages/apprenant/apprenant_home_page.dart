@@ -5,6 +5,7 @@ import 'dart:math';
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:ticket_app_odk/composants/categorie_compo.dart';
+import 'package:ticket_app_odk/composants/modal_ticket.dart';
 import 'package:ticket_app_odk/composants/ticket_compo.dart';
 
 class HomePage extends StatefulWidget {
@@ -19,6 +20,29 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
+      //mon boutton pour creer un ticket
+      floatingActionButton: FloatingActionButton(
+         onPressed: () {
+          showDialog(
+            context: context,
+            builder: (BuildContext context) {
+              return TicketModal(); // Affichez la modale ici
+            },
+          );
+          },
+
+        backgroundColor: Color(0xFF5E0707),
+        child: Icon(Icons.add,
+        color: Colors.white,
+        ),
+       shape: RoundedRectangleBorder(
+    borderRadius: BorderRadius.circular(50),
+        ),
+      ),
+
+
+      
+    //bottom navigation avec mes îcones
       bottomNavigationBar: CurvedNavigationBar( 
         color: Color(0xFF5E0707),
         backgroundColor: Colors.white,
@@ -28,7 +52,6 @@ class _HomePageState extends State<HomePage> {
           Icon(Icons.message, color: Colors.white),
           Icon(Icons.person, color: Colors.white),
           Icon(Icons.settings, color: Colors.white),
-          Icon(Icons.dashboard, color: Colors.white),
         ],
       ),
       appBar: AppBar(
@@ -123,11 +146,61 @@ class _HomePageState extends State<HomePage> {
           Expanded(
             child: ListView(
               children: [
-                TicketCompo(),
-                TicketCompo(),
-                TicketCompo(),
-                TicketCompo(),
-                TicketCompo(),
+                // TicketCompo(),
+                Card(
+      elevation: 4,
+      margin: EdgeInsets.all(16),
+      child: Padding(
+        padding: EdgeInsets.all(16),
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(
+              'zjebdzd*4cbeehec ejc ', // affiche le status de mon ticket ici
+              style: TextStyle(fontSize: 12),
+            ),
+            SizedBox(height: 20),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text('en_attente',//
+                style: TextStyle(
+                  color: const Color.fromARGB(255, 11, 77, 13),
+                  fontWeight: FontWeight.bold,
+                  fontStyle: FontStyle.italic,
+                  fontSize: 16
+                ),),
+                Container(
+                padding: EdgeInsets.only(left: 15, right: 15),
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(20),
+                  color: Color(0xFF5E0707),
+                ),
+                  child: Text('Pratique',//affiche la catégorie de mon ticket ici
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 16,
+                    backgroundColor: Color(0xFF5E0707),
+                    fontWeight: FontWeight.w900,
+                    fontStyle: FontStyle.italic
+                  ),
+                  ),
+                ),
+                Text('Adama Konaté',
+                style: TextStyle(
+                  color: Colors.black,
+                  fontWeight: FontWeight.w500,
+                  fontStyle: FontStyle.italic
+                ),
+                ),
+              ],
+            ),
+          ],
+        ),
+      ),
+    ),
+               
               ],
             ),
           ),
