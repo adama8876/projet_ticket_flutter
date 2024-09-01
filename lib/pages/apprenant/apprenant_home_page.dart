@@ -19,7 +19,7 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      bottomNavigationBar: CurvedNavigationBar(
+      bottomNavigationBar: CurvedNavigationBar( 
         color: Color(0xFF5E0707),
         backgroundColor: Colors.white,
         buttonBackgroundColor: Color(0xFF5E0707),

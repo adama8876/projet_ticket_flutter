@@ -1,7 +1,7 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
 import 'package:flutter/material.dart';
-import 'package:ticket_app_odk/pages/connection_page.dart';
+import 'package:ticket_app_odk/pages/add%20et%20auth/connection_page.dart';
 
 class LoginPage extends StatelessWidget {
   const LoginPage({super.key});

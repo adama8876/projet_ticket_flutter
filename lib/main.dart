@@ -1,7 +1,7 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'package:ticket_app_odk/pages/connection_page.dart';
-import 'package:ticket_app_odk/pages/home_page.dart';
+import 'package:ticket_app_odk/pages/add%20et%20auth/connection_page.dart';
+// import 'package:ticket_app_odk/pages/admin/admin_page.dart';
 // import 'package:ticket_app_odk/pages/login_page.dart';
 
 import 'firebase_options.dart';
