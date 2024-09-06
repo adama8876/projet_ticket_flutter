@@ -106,7 +106,24 @@ class _AddUserPageState extends State<AddUserPage> {
                 children: [
                   TextFormField(
                     controller: _firstNameController,
-                    decoration: InputDecoration(labelText: 'Prénom'),
+                    decoration: InputDecoration(hintText: 'Prénom',
+                    hintStyle: TextStyle(
+                        fontSize: 16.0,
+                        fontWeight: FontWeight.w500,
+                        fontStyle: FontStyle.italic,
+                        color: const Color.fromARGB(157, 158, 158, 158),
+                      ),
+                    fillColor: Colors.white.withOpacity(0.8),
+                            border: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(5.0),
+                            ),
+                            focusedBorder: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(5.0),
+                              borderSide: BorderSide(
+                                color: Color(0xFF5E0707),
+                                width: 2.0,
+                              ),
+                            ),),
                     validator: (value) {
                       if (value == null || value.isEmpty) {
                         return 'Veuillez entrer le prénom';
@@ -114,19 +131,63 @@ class _AddUserPageState extends State<AddUserPage> {
                       return null;
                     },
                   ),
+                  SizedBox(height: 20,),
                   TextFormField(
                     controller: _lastNameController,
-                    decoration: InputDecoration(labelText: 'Nom'),
+                    decoration: InputDecoration(
+                      hintText: 'nom ',
+                      hintStyle: TextStyle(
+                        fontSize: 16.0,
+                        fontWeight: FontWeight.w500,
+                        fontStyle: FontStyle.italic,
+                        color: const Color.fromARGB(157, 158, 158, 158),
+                      ),
+                    fillColor: Colors.white.withOpacity(0.8),
+                            border: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(5),
+                            ),
+                            focusedBorder: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(5),
+                              borderSide: BorderSide(
+                                color: Color(0xFF5E0707),
+                                width: 2.0,
+                              ),
+                            ),
+
+                    ),
                     validator: (value) {
                       if (value == null || value.isEmpty) {
                         return 'Veuillez entrer le nom';
                       }
                       return null;
                     },
+                    
                   ),
+                  SizedBox(height: 20,),
                   TextFormField(
                     controller: _contactController,
-                    decoration: InputDecoration(labelText: 'Contact'),
+                    decoration: InputDecoration(
+                      hintText: 'Contact',
+                      
+                      hintStyle: TextStyle(
+                        fontSize: 16.0,
+                        fontWeight: FontWeight.w500,
+                        fontStyle: FontStyle.italic,
+                        color: const Color.fromARGB(157, 158, 158, 158),
+                      ),
+                    fillColor: Colors.white.withOpacity(0.8),
+                            border: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(5),
+                              
+                            ),
+                            focusedBorder: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(5),
+                              borderSide: BorderSide(
+                                color: Color(0xFF5E0707),
+                                width: 2.0,
+                              ),
+                            ),
+                    ),
                     keyboardType: TextInputType.phone,
                     validator: (value) {
                       if (value == null || value.isEmpty) {
@@ -135,9 +196,29 @@ class _AddUserPageState extends State<AddUserPage> {
                       return null;
                     },
                   ),
+                  SizedBox(height: 20,),
                   TextFormField(
                     controller: _emailController,
-                    decoration: InputDecoration(labelText: 'Email'),
+                    decoration: InputDecoration(
+                      hintText: 'email',
+                      hintStyle: TextStyle(
+                        fontSize: 16.0,
+                        fontWeight: FontWeight.w500,
+                        fontStyle: FontStyle.italic,
+                        color: const Color.fromARGB(157, 158, 158, 158),
+                      ),
+                    fillColor: Colors.white.withOpacity(0.8),
+                            border: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(5),
+                            ),
+                            focusedBorder: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(5),
+                              borderSide: BorderSide(
+                                color: Color(0xFF5E0707),
+                                width: 2.0,
+                              ),
+                            ),
+                    ),
                     keyboardType: TextInputType.emailAddress,
                     validator: (value) {
                       if (value == null || value.isEmpty) {
@@ -146,9 +227,30 @@ class _AddUserPageState extends State<AddUserPage> {
                       return null;
                     },
                   ),
+                  SizedBox(height: 20,),
+
                   TextFormField(
                     controller: _passwordController,
-                    decoration: InputDecoration(labelText: 'Mot de passe'),
+                    decoration: InputDecoration(
+                      hintText: 'mot de passe',
+                      hintStyle: TextStyle(
+                        fontSize: 16.0,
+                        fontWeight: FontWeight.w500,
+                        fontStyle: FontStyle.italic,
+                        color: const Color.fromARGB(157, 158, 158, 158),
+                      ),
+                    fillColor: Colors.white.withOpacity(0.8),
+                            border: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(5),
+                            ),
+                            focusedBorder: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(5),
+                              borderSide: BorderSide(
+                                color: Color(0xFF5E0707),
+                                width: 2.0,
+                              ),
+                            ),
+                    ),
                     obscureText: true,
                     validator: (value) {
                       if (value == null || value.isEmpty) {
@@ -160,13 +262,41 @@ class _AddUserPageState extends State<AddUserPage> {
                       return null;
                     },
                   ),
+                  SizedBox(height: 20,),
+
                   DropdownButtonFormField<String>(
+                    dropdownColor: Color.fromARGB(226, 94, 7, 7),
                     value: _selectedRole,
-                    decoration: InputDecoration(labelText: 'Rôle'),
+                    decoration: InputDecoration(
+                      hintText: 'veuillez selectionner le rôle',
+                      hintStyle: TextStyle(
+                        fontSize: 16.0,
+                        fontWeight: FontWeight.w500,
+                        fontStyle: FontStyle.italic,
+                        color: const Color.fromARGB(157, 158, 158, 158),
+                      ),
+                    fillColor: Colors.white.withOpacity(0.8),
+                            border: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(5),
+                            ),
+                            focusedBorder: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(5),
+                              borderSide: BorderSide(
+                                color: Color(0xFF5E0707),
+                                width: 2.0,
+                              ),
+                            ),
+                    ),
                     items: ['Apprenant', 'Formateur', 'Admin']
                         .map((role) => DropdownMenuItem<String>(
                               value: role.toLowerCase(),
-                              child: Text(role),
+                              child: Center(
+                                child: Text(role,
+                                style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 16
+                                ),),
+                              ),
                             ))
                         .toList(),
                     onChanged: (value) {
@@ -181,10 +311,25 @@ class _AddUserPageState extends State<AddUserPage> {
                       return null;
                     },
                   ),
-                  SizedBox(height: 20),
-                  ElevatedButton(
-                    onPressed: _addUser,
-                    child: Text('Ajouter'),
+                  SizedBox(height: 50),
+                  Container(
+                    width: double.infinity ,
+                    color: Color(0xFF5E0707),
+                    
+                    child: ElevatedButton(
+                      onPressed: _addUser,
+                      child: Text('Ajouter',
+                      style: TextStyle(
+                        color:  Colors.white,
+                        fontWeight: FontWeight.bold,
+                        fontSize: 18.0,
+                      ),
+                      ),
+                      
+                      style: ButtonStyle(
+                       backgroundColor: MaterialStateProperty.all(Color(0xFF5E0707),),
+                      ),
+                    ),
                   ),
                 ],
               ),
@@ -195,3 +340,26 @@ class _AddUserPageState extends State<AddUserPage> {
     );
   }
 }
+
+
+
+
+// decoration: InputDecoration(
+//                             hintText: 'Email',
+//                             filled: true,
+//                             fillColor: Colors.white.withOpacity(0.8),
+//                             border: OutlineInputBorder(
+//                               borderRadius: BorderRadius.circular(5),
+//                             ),
+//                             focusedBorder: OutlineInputBorder(
+//                               borderRadius: BorderRadius.circular(5),
+//                               borderSide: BorderSide(
+//                                 color: Color(0xFF5E0707),
+//                                 width: 2.0,
+//                               ),
+//                             ),
+//                             prefixIcon: Icon(
+//                               Icons.email,
+//                               color: Colors.grey,
+//                             ),
+//                           ),

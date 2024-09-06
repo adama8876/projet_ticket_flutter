@@ -4,6 +4,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:ticket_app_odk/pages/admin/admin_page.dart';
+import 'package:ticket_app_odk/pages/apprenant/apprenant_pages.dart';
 import 'package:ticket_app_odk/pages/formateur/formateur_page.dart';
 import 'package:ticket_app_odk/pages/apprenant/apprenant_home_page.dart';
 
@@ -18,6 +19,9 @@ class _ConnectionPageState extends State<ConnectionPage> {
   final _emailController = TextEditingController();
   final _passwordController = TextEditingController();
   final _formKey = GlobalKey<FormState>();
+
+
+  
 
   Future<void> _seConnecter() async {
     if (_formKey.currentState?.validate() ?? false) {
@@ -56,7 +60,7 @@ class _ConnectionPageState extends State<ConnectionPage> {
                 break;
               case 'apprenant':
                 Navigator.pushReplacement(
-                    context, MaterialPageRoute(builder: (context) => HomePage()));
+                    context, MaterialPageRoute(builder: (context) => ApprenantPages()));
                 break;
               default:
                 ScaffoldMessenger.of(context).showSnackBar(
@@ -185,6 +189,8 @@ class _ConnectionPageState extends State<ConnectionPage> {
                               Icons.lock,
                               color: Colors.grey,
                             ),
+                            // suffixIcon: IconButton(onPressed: , icon: Icon(Icons.remove_red_eye_rounded
+                            // ))
                           ),
                         ),
                         SizedBox(height: 10),

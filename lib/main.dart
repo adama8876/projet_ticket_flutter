@@ -1,6 +1,12 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:ticket_app_odk/pages/add%20et%20auth/connection_page.dart';
+import 'package:ticket_app_odk/pages/add%20et%20auth/login_page.dart';
+import 'package:ticket_app_odk/pages/admin/admin_page.dart';
+import 'package:ticket_app_odk/pages/apprenant/apprenant_home_page.dart';
+import 'package:ticket_app_odk/pages/apprenant/apprenant_pages.dart';
+import 'package:ticket_app_odk/pages/formateur/formateur_Accueil.dart';
+import 'package:ticket_app_odk/pages/formateur/formateur_page.dart';
 // import 'package:ticket_app_odk/pages/admin/admin_page.dart';
 // import 'package:ticket_app_odk/pages/login_page.dart';
 
@@ -40,7 +46,7 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
       // home: const LoginPage(),
-      home:  ConnectionPage(),
+      home:  LoginPage(),
     );
   }
 }
